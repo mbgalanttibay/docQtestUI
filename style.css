@@ -1,0 +1,173 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary:
+#f2f2f2
+#f03e3e
+- Tints:
+- Shades: 
+- Accents:
+- Greys
+
+#adb5bd
+#888
+#555
+#333
+ #1b1b1b
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #f2f2f2;
+}
+
+.main-grid-layout {
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f03e3e;
+  color: #ebebeb;
+}
+
+nav {
+  width: 100vw;
+}
+
+.main-nav-list {
+  background-color: #f03e3e;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  width: 2.4rem;
+  stroke: #f2f2f2;
+  transition: all 0.5s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  stroke: #1b1b1b;
+}
+
+.active {
+  transform: scale(1.5);
+  stroke: #1b1b1b;
+}
+
+/*****************/
+
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.section-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3.6rem 1fr;
+
+  transition: transform 0.5s;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dee2e6;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/*Document Section*/
+
+.add-btn {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1;
+  font-weight: 600;
+  color: #555;
+  border: none;
+  padding: 0.4rem 1rem;
+}
+
+.add-btn:hover {
+  color: #ebebeb;
+  background-color: #a3a3a3;
+}
+
+.document-container-box {
+  overflow: scroll;
+}
+
+.document-container {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.document-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 3.6rem;
+}
